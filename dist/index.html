@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tradutor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section id="translator">
+        <h1 id="translator__title">Translator</h1>
+        <div id="translator__container">
+            <div id="translator__selects">
+                <div class="translator__question translator__global">
+                    <div class="translator__viewer">
+                        <span class="translator__language">Portuguese</span>
+                        <svg class="translator__svg" width="2rem" height="1rem" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="translator__img" d="M10.5827 11.2083L0.166016 0.791668L20.9993 0.791668L10.5827 11.2083Z" fill="#464646"/>
+                        </svg>
+                    </div>
+                    <ul class="translator__menu">
+                        <li class="translator__options">Portuguese</li>
+                        <li class="translator__options">English</li>
+                        <li class="translator__options">Japanese</li>
+                        <li class="translator__options">Spanish</li>
+                    </ul>
+                    <textarea class="translator__textarea translator__textarea-translate" cols="30" rows="10"></textarea>
+                </div>
+                <img id="translator__swap" src="../assets/svgs/Swap.svg" alt="">
+                <div class="translator__answer translator__global">
+                    <div class="translator__viewer">
+                        <span class="translator__language">English</span>
+                        <svg class="translator__svg" width="2rem" height="1rem" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="translator__img" d="M10.5827 11.2083L0.166016 0.791668L20.9993 0.791668L10.5827 11.2083Z" fill="#464646"/>
+                        </svg>
+                    </div>
+                    <ul class="translator__menu">
+                        <li class="translator__options">Portuguese</li>
+                        <li class="translator__options">English</li>
+                        <li class="translator__options">Japanese</li>
+                        <li class="translator__options">Spanish</li>
+                    </ul>
+                    <textarea disabled class="translator__textarea translator__textarea-translated" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <button id="translator__button">Traduzir</button>
+        </div>
+    </section>
+    <script src="./js/java.js"></script>
+</body>
+</html>
