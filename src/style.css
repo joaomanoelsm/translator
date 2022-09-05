@@ -192,6 +192,18 @@ html {
     transition: all .4s;
 }
 
+.translator__textarea::-webkit-scrollbar {
+    width: 12px;
+}
+  
+.translator__textarea::-webkit-scrollbar-track {
+}
+  
+.translator__textarea::-webkit-scrollbar-thumb {
+    background-color: var( --main-color );    
+    border-radius: 20px;       
+}
+
 @media (max-width: 1150px) {
     html {
         font-size: 40%;
