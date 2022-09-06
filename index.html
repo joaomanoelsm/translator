@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,8 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/style.css">
 </head>
+
 <body>
-    <section id="translator">
+    <main id="translator">
         <h1 id="translator__title">Translator</h1>
         <div id="translator__container">
             <div id="translator__selects">
@@ -29,9 +31,8 @@
                         <li class="translator__options">Japanese</li>
                         <li class="translator__options">Spanish</li>
                     </ul>
-                    <label>
-                        <textarea id="translator__textarea-translate" class="translator__textarea" cols="30" rows="10"></textarea>
-                    </label>
+                    <label for="translator__textarea-translate"></label>
+                    <textarea aria-labelledby="translator__textarea-translated" id="translator__textarea-translate" class="translator__textarea" cols="30" rows="10"></textarea>
                 </div>
                 <img id="translator__swap" src="./assets/svgs/Swap.svg" alt="">
                 <div class="translator__answer translator__global">
@@ -47,14 +48,14 @@
                         <li class="translator__options">Japanese</li>
                         <li class="translator__options">Spanish</li>
                     </ul>
-                    <label>
-                        <textarea textarea disabled id="translator__textarea-translated" class="translator__textarea" cols="30" rows="10"></textarea>
-                    </label>
+                    <label for="translator__textarea-translated"></label>
+                    <textarea aria-labelledby="translator__textarea-translated" textarea disabled id="translator__textarea-translated" class="translator__textarea" cols="30" rows="10"></textarea>
                 </div>
             </div>
             <button id="translator__button">Translate</button>
         </div>
-    </section>
+    </main>
     <script src="./dist/js/java.js"></script>
 </body>
+
 </html>

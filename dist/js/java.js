@@ -2,8 +2,8 @@
 const translator = document.querySelector('#translator__container');
 const selects = document.querySelectorAll('.translator__global');
 const menus = document.querySelectorAll('.translator__menu');
-const translatorTextArea = document.querySelector('.translator__textarea-translate');
-const translatedTextArea = document.querySelector('.translator__textarea-translated');
+const translatorTextArea = document.querySelector('#translator__textarea-translate');
+const translatedTextArea = document.querySelector('#translator__textarea-translated');
 const translatorSwap = document.querySelector('#translator__swap');
 const button = document.querySelector('#translator__button');
 const countries = {
@@ -30,7 +30,7 @@ menus.forEach((menu) => {
         }
     });
 });
-translatorSwap.addEventListener('click', () => {
+const invertLanguages = () => {
     const textToTranslate = translator.children[0].children[0].children[0].children[0].innerHTML;
     const translatedText = translator.children[0].children[2].children[0].children[0].innerHTML;
     translator.children[0].children[0].children[0].children[0].innerHTML = translatedText;
@@ -40,7 +40,8 @@ translatorSwap.addEventListener('click', () => {
     translatorTextArea.value = translatedTextBox;
     translatedTextArea.value = textboxToTranslate;
     filterSelectedLanguage();
-});
+};
+translatorSwap.addEventListener('click', invertLanguages);
 const filterSelectedLanguage = () => {
     let languageTranslator = translator.children[0].children[0].children[0].children[0].innerHTML;
     let languageTranslated = translator.children[0].children[2].children[0].children[0].innerHTML;
@@ -57,12 +58,12 @@ const filterSelectedLanguage = () => {
     return [languageToTranslate[0][0], translatedLanguage[0][0]];
 };
 button.addEventListener('click', filterSelectedLanguage);
-translatorTextArea.onkeydown = (e) => {
+translatorTextArea.addEventListener("keydown", (e) => {
     if (e.key === 'Enter') {
         e.preventDefault();
         filterSelectedLanguage();
     }
-};
+});
 const loadTranslation = (inputLanguage, outputLanguage) => {
     fetch(`https://api.mymemory.translated.net/get?q=${translatorTextArea.value}&langpair=${inputLanguage}|${outputLanguage}`)
         .then(response => response.json())
