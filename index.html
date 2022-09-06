@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tradutor</title>
+    <meta name="description" content="Translation site made for my portfolio">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
@@ -28,8 +29,9 @@
                         <li class="translator__options">Japanese</li>
                         <li class="translator__options">Spanish</li>
                     </ul>
-                    <label for="translator__textarea-translate"></label>
-                    <textarea class="translator__textarea translator__textarea-translate" cols="30" rows="10"></textarea>
+                    <label>
+                        <textarea id="translator__textarea-translate" class="translator__textarea" cols="30" rows="10"></textarea>
+                    </label>
                 </div>
                 <img id="translator__swap" src="./assets/svgs/Swap.svg" alt="">
                 <div class="translator__answer translator__global">
@@ -45,8 +47,9 @@
                         <li class="translator__options">Japanese</li>
                         <li class="translator__options">Spanish</li>
                     </ul>
-                    <label for="translator__textarea-translated"></label>
-                    <textarea disabled class="translator__textarea translator__textarea-translated" cols="30" rows="10"></textarea>
+                    <label>
+                        <textarea textarea disabled id="translator__textarea-translated" class="translator__textarea" cols="30" rows="10"></textarea>
+                    </label>
                 </div>
             </div>
             <button id="translator__button">Translate</button>

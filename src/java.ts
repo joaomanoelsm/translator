@@ -2,8 +2,8 @@ const translator = document.querySelector('#translator__container') as HTMLDivEl
 const selects = document.querySelectorAll('.translator__global')!
 const menus = document.querySelectorAll('.translator__menu')!
 
-const translatorTextArea = document.querySelector('.translator__textarea-translate') as HTMLTextAreaElement
-const translatedTextArea = document.querySelector('.translator__textarea-translated') as HTMLTextAreaElement
+const translatorTextArea = document.querySelector('#translator__textarea-translate') as HTMLTextAreaElement
+const translatedTextArea = document.querySelector('#translator__textarea-translated') as HTMLTextAreaElement
 
 const translatorSwap = document.querySelector('#translator__swap') as HTMLImageElement
 const button = document.querySelector('#translator__button') as HTMLButtonElement
@@ -83,12 +83,12 @@ const filterSelectedLanguage = () => {
 
 button.addEventListener('click', filterSelectedLanguage )
 
-translatorTextArea.onkeydown = ( e: KeyboardEvent ) => {
+translatorTextArea.addEventListener( "keydown", ( e: KeyboardEvent ) => {
     if ( e.key === 'Enter' ) {
         e.preventDefault()
         filterSelectedLanguage()
     }
-}
+})
 
 const loadTranslation = ( inputLanguage: string, outputLanguage: string ) => {
     fetch(`https://api.mymemory.translated.net/get?q=${ translatorTextArea.value }&langpair=${ inputLanguage }|${ outputLanguage }`)
