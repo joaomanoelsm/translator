@@ -46,7 +46,7 @@ menus.forEach( ( menu: any ) => {
     })
 });
 
-translatorSwap.addEventListener('click', () => {
+const invertLanguages = () => {
     const textToTranslate = translator.children[0].children[0].children[0].children[0].innerHTML
     const translatedText = translator.children[0].children[2].children[0].children[0].innerHTML
     
@@ -60,7 +60,9 @@ translatorSwap.addEventListener('click', () => {
     translatedTextArea.value = textboxToTranslate
 
     filterSelectedLanguage()
-})
+}
+
+translatorSwap.addEventListener('click', invertLanguages )
 
 const filterSelectedLanguage = () => {
     let languageTranslator = translator.children[0].children[0].children[0].children[0].innerHTML
