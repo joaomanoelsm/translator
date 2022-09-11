@@ -32,4 +32,22 @@
 
 ## Guide
 
-<img src="https://github.com/joaomanoelsm/translator/public/readme/img-1.jpg" />
+
+<br>
+<p>The first text box is where the word or phrase for the translation will be entered, the second text box will be the result of the translation</p>
+
+![POST_SHOW](https://github.com/joaomanoelsm/translator/blob/master/public/readme/img-1.jpg)
+
+<br>
+<p>This checkbox above the left, is where you will choose the input language, in which your text refers</p>
+
+![POST_SHOW](https://github.com/joaomanoelsm/translator/blob/master/public/readme/img-2.jpg)
+
+<br>
+<p>The checkbox above on the right, is the language chosen by you to be translated</p>
+
+![POST_SHOW](https://github.com/joaomanoelsm/translator/blob/master/public/readme/img-3.jpg)
+
+<br>
+<p>Thanks for visiting my repository, and i hope it's useful, see you soon</p>
+
