@@ -16,6 +16,9 @@
 
 body {
     background-image: url('../assets/imgs/Background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 html {
