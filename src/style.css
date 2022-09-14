@@ -258,6 +258,7 @@ html {
 @media (max-width: 1023px) {
     body {
         overflow: auto;
+        height: auto;
     }
 }
 
