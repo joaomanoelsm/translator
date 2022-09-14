@@ -15,13 +15,12 @@
 }
 
 body {
+    height: 100vh;
     background-image: url('../public/assets/imgs/Background.jpg');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
     background-size: cover;
-    
-    width: 100%;
-    height: 100vh;
+    overflow: hidden;
 }
 
 html {
@@ -253,6 +252,12 @@ html {
 @media (max-width: 1150px) {
     html {
         font-size: 40%;
+    }
+}
+
+@media (max-width: 1023px) {
+    body {
+        overflow: auto;
     }
 }
 
