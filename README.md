@@ -4,15 +4,15 @@
 
 ## Installation
 
-### $ git init
+### `$ git init`
 
 <p>git init to create your local repository</p>
 
-### $ git clone https://github.com/joaomanoelsm/translator.git
+### `$ git clone https://github.com/joaomanoelsm/translator.git`
 
 <p>git clone to copy the project and its dependencies to your machine</p>
 
-### npm install
+### `npm install`
 
 <p>npm install to download all project dependencies</p>
 
